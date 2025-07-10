@@ -1,0 +1,413 @@
+/* === GLOBAL STYLES === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+}
+
+/* === MAIN CONTAINER STYLING === */
+.main-container {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  justify-content: center;
+  padding: 40px;
+  gap: 30px;
+  background: url(../../OIP.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* === LEFT + RIGHT PANEL CONTAINERS === */
+.left-panel, .right-panel {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  width: 45%; /* Share space equally */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-panel {
+  background: rgba(10, 45, 80, 0.8); /* Dark frosted glass */
+  color: #fff;
+}
+
+/* === HEADINGS === */
+.right-panel h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+/* === INPUT ROWS === */
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* === TEXT INPUTS === */
+.row input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* === TEXTAREA === */
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* === CHECKBOX GROUP === */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.checkbox label {
+  line-height: 1.4;
+}
+
+/* === LINKS === */
+a {
+  color: #a1d0ff;
+  text-decoration: underline;
+}
+
+/* === SUBMIT BUTTON === */
+.submit-button {
+  background-color: #fff;
+  color: #000;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* === SLOT BADGE (ROUND) === */
+.slot-badge {
+  background: #3730a3;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* === LEFT PANEL TITLE === */
+.left-panel h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+/* === LIST OF BENEFITS === */
+.benefits {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.benefits li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* === CONTACT BUTTON === */
+.contact-button {
+  background: #c19c68;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* === INFO BOX === */
+.info-box {
+  background: #f6ede9;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.info-box h3 {
+  color: #3e1f47;
+  margin-bottom: 10px;
+}
+
+.info-box p, .info-box ul {
+  color: #333;
+  font-size: 14px;
+}
+
+/* === FROSTED GLASS EFFECT FOR FORM === */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* === UNDERLINED INPUT STYLING === */
+.underline-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  outline: #000;
+}
+
+.underline-input::placeholder {
+  color: #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* === INFO SECTION CONTAINER === */
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 30px;
+  max-width: 800px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* === LEFT INFO PANEL === */
+.left-info {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* === CIRCULAR BADGE === */
+.circle-badge {
+  position: absolute;
+  top: -40px;
+  right: 30px;
+  background: #4338ca;
+  color: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* === OFFER HEADLINE === */
+.offer-details h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* === LIST OF FEATURES === */
+.offer-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 20px 0;
+}
+
+.offer-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.offer-list li::before {
+  content: '✔';
+  color: #4CAF50;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* === CTA BUTTON === */
+.contact-btn {
+  background-color: #b88b58;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #9c713d;
+}
+
+/* === HIGHLIGHT SECTION BOTTOM === */
+.bottom-highlight {
+  background: #ede7e3;
+  padding: 25px;
+  border-radius: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.bottom-highlight h3 {
+  color: #4b1d3f;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bottom-highlight p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.bottom-highlight ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.bottom-highlight li {
+  margin-bottom: 6px;
+}
+
+/* === MEDIA QUERIES FOR RESPONSIVENESS === */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .circle-badge {
+    position: static;
+    margin: 0 auto 20px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .left-panel,
+  .right-panel,
+  .frosted-glass {
+    padding: 20px;
+  }
+
+  .offer-details h1 {
+    font-size: 28px;
+  }
+
+  .bottom-highlight h3 {
+    font-size: 18px;
+  }
+
+  .submit-button,
+  .contact-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .slot-badge {
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .underline-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .offer-details h1 {
+    font-size: 24px;
+  }
+
+  .bottom-highlight,
+  .info-wrapper,
+  .frosted-glass {
+    padding: 15px;
+  }
+
+  .circle-badge {
+    width: 90px;
+    height: 90px;
+    font-size: 11px;
+  }
+
+  .submit-button,
+  .contact-btn {
+    font-size: 14px;
+  }
+
+  .checkbox {
+    font-size: 12px;
+  }
+
+  .bottom-highlight h3 {
+    font-size: 16px;
+  }
+
+  .bottom-highlight li {
+    font-size: 13px;
+  }
+}
