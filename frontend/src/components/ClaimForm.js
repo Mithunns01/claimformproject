@@ -38,6 +38,14 @@ const ClaimForm = () => {
       return;
     }
 
+  const today = new Date();
+  const diagnosisDate = new Date(formData.diagnosisDate);
+
+  if (diagnosisDate > today) {
+    alert('Diagnosis Date cannot be in the future.');
+    return;
+  }
+
     const payload = {
       fullName: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
@@ -130,7 +138,7 @@ const ClaimForm = () => {
 
           {/* Diagnosis Date & Type */}
           <div className="row">
-            <input name="diagnosisDate" type="date" value={formData.diagnosisDate} required onChange={handleChange} className="underline-input" />
+            <input name="diagnosisDate" type="date" max={new Date().toISOString().split("T")[0]} value={formData.diagnosisDate} required onChange={handleChange} className="underline-input" />
             <input name="diagnosisType" placeholder="Type of Diagnosis *" value={formData.diagnosisType} required onChange={handleChange} className="underline-input" />
           </div>
 
